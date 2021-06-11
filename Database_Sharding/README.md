@@ -40,7 +40,7 @@ $ docker run --name urlshard2 -e 'POSTGRES_PASSWORD+password' -p 5433:5432 -d ur
 $ docker run --name urlshard3 -e 'POSTGRES_PASSWORD+password' -p 5434:5432 -d urlshard
 ```
 
-Make sure these 3 containers are running using the ```sh $ docker ps ```  command.
+Make sure these 3 containers are running using the ``` $ docker ps ```  command.
 
 Note: You can use GUI tools like [pgadmin] to view the changes in the table. 
 
