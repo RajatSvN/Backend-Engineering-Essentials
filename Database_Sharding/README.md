@@ -23,7 +23,7 @@ single table containg an Auto Incrementing ID, Original URL and URL_ID (Short St
 
 The schema for the table is defined in the init.sql file.
 
-We first create a custom docker image using the code in our Dockerfile whcih creates our url shortening table
+We first create a custom docker image using the code in our Dockerfile which creates our url shortening table
 everytime we spin a container using this image.
 
 Use the following command,
@@ -55,7 +55,7 @@ It is a Hash based Sharding and makes use of Concepts like [Consistent_Hashing] 
 evenly distribute requests/data amongst servers.
 
 A Hash Ring is theoretically a Circle on which Servers and Requests are mapped using a Hash Function. The request
-gets assigned to the nearest circle on the ring. It is a good technique to distribute load and gives a good performance even when servers are added or removed as compared to a linear hashtable.
+gets assigned to the nearest server on the ring. It is a good technique to distribute load and gives a good performance even when servers are added or removed as compared to a linear hashtable.
 
 The Application uses the built in Crypto library and SHA256 to convert incoming URL to a hash and npm hashring library for the [hashring] implementation.
 
