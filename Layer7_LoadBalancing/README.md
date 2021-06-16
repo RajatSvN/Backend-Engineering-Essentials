@@ -54,11 +54,19 @@ $ sudo nginx
 
 1. All the traffic to the index route ("/") is distributed to the 3 servers using Round Robin Algorithm which is default. The index route is the most accessed so all 3 servers are assigned to it.
 
+![Route1](https://user-images.githubusercontent.com/38208071/122178420-31c6c280-cea4-11eb-9bcd-cd8817facaec.gif)
+
 2. ("/app1") is assumed to be not accessed as frequently as the index route however it still has significant load so we assign 2 servers (AppId 333 and 444 Servers) to it.
+
+![Route2](https://user-images.githubusercontent.com/38208071/122178437-368b7680-cea4-11eb-90c6-0391994694e4.gif)
 
 3. ("/app2") is assumed to recieve much less traffic so a single Server (AppId 555) is assigned to it
 
+![Route3](https://user-images.githubusercontent.com/38208071/122178474-4014de80-cea4-11eb-839f-68cd13d940c3.gif)
+
 4. ("/admin") is a restricted route so we disable it for http traffic and return 403
+
+![Forbidden_error](https://user-images.githubusercontent.com/38208071/122178505-4440fc00-cea4-11eb-93bd-187da4023dfd.JPG)
 
 
 
