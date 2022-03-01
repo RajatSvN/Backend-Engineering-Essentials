@@ -72,8 +72,16 @@ Note: Since this api dumps everything in the UI depending on your System specifi
       is a science project made on weekend, so I hope you understand :)
 
 # Request Timings for different type of requests
+   
+Below request tries to fetch 100000 records from the database in chunks of 1000, the time taken everything included is 3.91 seconds
+Implication being only 1000 records are loaded in the API Memory at a given time.
 
-Coming Soon...
+![image](https://user-images.githubusercontent.com/38208071/156127938-b81b94cf-b594-4643-a236-91c6f4b19170.png)
+
+Below request fetches half a million records (500,000) in chunk size of 1000, the time taken is around 1.1 minutes 
+![image](https://user-images.githubusercontent.com/38208071/156128895-6b088dd1-e6fa-4c4f-98a0-19c6f5058864.png)
+   
+Finally the big request to fetch all million records in chunk size of 1000, As you would see this took a while and request goes on for some time, 
  
 [gist]: <https://gist.github.com/RajatSvN/d9ecb196dcf0207e3a400c01b65e8bb1>
 
