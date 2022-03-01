@@ -82,6 +82,14 @@ Below request fetches half a million records (500,000) in chunk size of 1000, th
 ![image](https://user-images.githubusercontent.com/38208071/156128895-6b088dd1-e6fa-4c4f-98a0-19c6f5058864.png)
    
 Finally the big request to fetch all million records in chunk size of 1000, As you would see this took a while and request goes on for some time, 
+It ran for around 6 minutes and at around that time it was able to fetch more than 750,000 + records 
+![image](https://user-images.githubusercontent.com/38208071/156132005-928871a9-fdfd-4a69-99c4-0b1890ccf780.png)
+   
+However, as I mentioned before, putting so much data is not a brilliant approach, so Chrome ran out of memory resulting in this,
+![image](https://user-images.githubusercontent.com/38208071/156132653-57a09a2f-0cff-4ec3-aa53-8d58a5737559.png)
+   
+Overall, It might be interesting to play around with different chunk sizes, total records and a more novel way to display data. 
+I hope this elementary example helps you solve much bigger problems!
  
 [gist]: <https://gist.github.com/RajatSvN/d9ecb196dcf0207e3a400c01b65e8bb1>
 
